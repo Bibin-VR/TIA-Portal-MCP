@@ -1,9 +1,9 @@
-# TIA-Bridge: Siemens TIA Portal for AI agents
+# TIA Portal MCP: Siemens TIA Portal and PLC programming with AI
 
-TIA-Bridge connects Claude, or any other AI agent that speaks the Model Context Protocol
+TIA-Portal-MCP is an MCP server that connects Claude, or any other AI agent that speaks the Model Context Protocol
 (MCP), to Siemens TIA Portal and the PLCs it programs. You describe the machine in plain
-language. The agent creates the project, configures the hardware, writes the PLC program,
-sets up motion axes and HMI screens, compiles everything, tests it in the simulator and
+language. The agent creates the project, configures the hardware, writes the PLC program in ladder logic (LAD) or SCL for S7-1200 and S7-1500 CPUs,
+sets up motion axes and WinCC HMI screens, compiles everything, tests it in the simulator and
 downloads it to the PLC. During commissioning it reads and writes live PLC values while
 you work on the machine.
 
@@ -42,7 +42,7 @@ you work on the machine.
 
 ## Simulation
 
-TIA-Bridge works with S7-PLCSIM, Siemens' PLC simulator, so a program can run in
+TIA-Portal-MCP works with S7-PLCSIM, Siemens' PLC simulator, so a program can run in
 simulation before it goes near a real PLC. The agent starts PLCSIM, loads the hardware
 and the program, switches between RUN, STOP and PAUSE, compares the simulated PLC with the
 project, reloads it after a change, and closes it again. PLCSIM has to match the TIA
@@ -83,9 +83,9 @@ PLCSIM Advanced and WinCC runtime simulation are not supported yet.
 
 TIA Portal is a large tool, and much of a PLC engineer's day goes into clicking through
 it: adding hardware, setting parameters, wiring up HMI tags, compiling and fixing. With
-TIA-Bridge an agent does that work from a description, and the engineer reviews the result
+TIA-Portal-MCP an agent does that work from a description, and the engineer reviews the result
 and decides what goes to the machine.
 
 ---
 
-<sub>TIA-Bridge is proprietary. This repository is an overview; the source is private.</sub>
+<sub>TIA-Portal-MCP is proprietary. This repository is an overview; the source is private.</sub>
